@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3fdeb76b-b8fc-44c3-a0f4-d8e5910d18ce" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../config-repository/client-base-config/application-dev.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-repository/client-base-config/application-prod.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-repository/client-base-config/application-test.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-repository/client-base-config/application.properties" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap-asymmetric.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap-symmetric.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/resources/key/ReadMe.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/bootstrap.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/allpication.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/cloud/config/ConfigServiceEncryptApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-symmetric.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/spring/cloud/config/ConfigServiceEncryptApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/cloud/config/domain/Info.java" />
+        <option value="$PROJECT_DIR$/src/test/java/spring/cloud/config/SymmetricTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/spring/cloud/config/AsymmetricTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/bootstrap-asymmetric.yml" />
+        <option value="$PROJECT_DIR$/src/main/resources/bootstrap-symmetric.yml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="config-service-encrypt" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="config-service-encrypt" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="139" />
+    <option name="y" value="13" />
+    <option name="width" value="1161" />
+    <option name="height" value="699" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="config-service-encrypt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="config-service-encrypt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="config-service-encrypt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="config-service-encrypt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="config-service-encrypt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="config-service-encrypt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="config-service-encrypt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="config-service-encrypt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="config-service-encrypt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="config-service-encrypt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="config-service-encrypt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="config-service-encrypt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="config-service-encrypt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="config-service-encrypt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="config-service-encrypt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="config-service-encrypt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="config-service-encrypt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="config-service-encrypt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588690229513" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.selected.package.tslint" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\gitHub\spring\cloud\config\config-service-encrypt\src\main\resources" />
+      <recent name="D:\gitHub\spring\cloud\config\config-service-encrypt\src\main\resources\key" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="spring.cloud.config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\gitHub\spring\cloud\config\config-service-encrypt\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.AsymmetricTest.decryptTest">
+    <configuration name="AsymmetricTest.decryptTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="config-service-encrypt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spring.cloud.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spring.cloud.config" />
+      <option name="MAIN_CLASS_NAME" value="spring.cloud.config.AsymmetricTest" />
+      <option name="METHOD_NAME" value="decryptTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AsymmetricTest.encryptTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="config-service-encrypt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spring.cloud.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spring.cloud.config" />
+      <option name="MAIN_CLASS_NAME" value="spring.cloud.config.AsymmetricTest" />
+      <option name="METHOD_NAME" value="encryptTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SymmetricTest.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="config-service-encrypt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spring.cloud.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spring.cloud.config" />
+      <option name="MAIN_CLASS_NAME" value="spring.cloud.config.SymmetricTest" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SymmetricTest.decryptTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="config-service-encrypt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spring.cloud.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spring.cloud.config" />
+      <option name="MAIN_CLASS_NAME" value="spring.cloud.config.SymmetricTest" />
+      <option name="METHOD_NAME" value="decryptTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SymmetricTest.encryptTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="config-service-encrypt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spring.cloud.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spring.cloud.config" />
+      <option name="MAIN_CLASS_NAME" value="spring.cloud.config.SymmetricTest" />
+      <option name="METHOD_NAME" value="encryptTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServiceEncryptApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="config-service-encrypt" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="spring.cloud.config.ConfigServiceEncryptApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AsymmetricTest.decryptTest" />
+        <item itemvalue="JUnit.AsymmetricTest.encryptTest" />
+        <item itemvalue="JUnit.SymmetricTest.decryptTest" />
+        <item itemvalue="JUnit.SymmetricTest.encryptTest" />
+        <item itemvalue="JUnit.SymmetricTest.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3fdeb76b-b8fc-44c3-a0f4-d8e5910d18ce" name="Default Changelist" comment="" />
+      <created>1588652598813</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588652598813</updated>
+      <workItem from="1588652604663" duration="14066000" />
+      <workItem from="1588737704150" duration="70000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ConfigServiceEncryptApplicationTests_contextLoads - 2020.05.05 at 20h 34m 06s.xml">
+      <configuration name="ConfigServiceEncryptApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConfigServiceEncryptApplicationTests_encryptTest - 2020.05.05 at 22h 09m 58s.xml">
+      <configuration name="ConfigServiceEncryptApplicationTests.encryptTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConfigServiceEncryptApplicationTests_encryptTest - 2020.05.05 at 22h 12m 24s.xml">
+      <configuration name="ConfigServiceEncryptApplicationTests.encryptTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SymmetricTest_decryptTest - 2020.05.05 at 22h 15m 08s.xml">
+      <configuration name="SymmetricTest.decryptTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SymmetricTest_encryptTest - 2020.05.05 at 22h 20m 51s.xml">
+      <configuration name="SymmetricTest.encryptTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SymmetricTest_decryptTest - 2020.05.05 at 22h 21m 12s.xml">
+      <configuration name="SymmetricTest.decryptTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AsymmetricTest_encryptTest - 2020.05.05 at 22h 22m 52s.xml">
+      <configuration name="AsymmetricTest.encryptTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AsymmetricTest_encryptTest - 2020.05.05 at 22h 26m 13s.xml">
+      <configuration name="AsymmetricTest.encryptTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AsymmetricTest_encryptTest - 2020.05.05 at 22h 49m 29s.xml">
+      <configuration name="AsymmetricTest.encryptTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AsymmetricTest_decryptTest - 2020.05.05 at 22h 49m 54s.xml">
+      <configuration name="AsymmetricTest.decryptTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="14136000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="139" y="13" width="1161" height="699" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29427794" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286219" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39399293" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286219" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32970026" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/cloud/config/ConfigServiceEncryptApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-symmetric.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/cloud/config/domain/Info.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="73" column="26" lean-forward="true" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/key/ReadMe.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/spring/cloud/config/SymmetricTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/spring/cloud/config/AsymmetricTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+          <folding>
+            <element signature="e#1483#1484#0" expanded="true" />
+            <element signature="e#1560#1561#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap-asymmetric.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap-symmetric.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

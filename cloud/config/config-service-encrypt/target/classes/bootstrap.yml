@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: asymmetric
+
+---
+spring:
+  profiles: symmetric
+
+---
+spring:
+  profiles: asymmetric

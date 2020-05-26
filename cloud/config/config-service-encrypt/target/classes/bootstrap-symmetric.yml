@@ -1,0 +1,16 @@
+server:
+  port: 1001
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zhuleiming03/config
+          search-paths: config-repository/client-symmetric-config
+          basedir: D:/document/local
+          username: zhuleiming03@gmail.com
+
+# 配置对称加密密钥
+encrypt:
+  key: FKuf&f732LfP432fF_fe842hF
