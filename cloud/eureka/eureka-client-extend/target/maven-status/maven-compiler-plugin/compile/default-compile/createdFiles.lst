@@ -1,0 +1,6 @@
+spring\cloud\eureka\domian\User.class
+spring\cloud\eureka\controller\HelloController.class
+spring\cloud\eureka\controller\FeignController.class
+spring\cloud\eureka\controller\HystrixController.class
+spring\cloud\eureka\controller\RibbonController.class
+spring\cloud\eureka\EurekaClientExtendApplication.class

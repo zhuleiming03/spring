@@ -1,0 +1,13 @@
+package spring.cloud.stream;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class StreamBindingApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(StreamBindingApplication.class, args);
+    }
+
+}

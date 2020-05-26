@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: sa
+  cloud:
+    stream:
+      default-binder: rabbit
+      bindings:
+        springCloudStream:
+          content-type: application/json
+        test:
+          binder: kafka
+          content-type: application/json
+
+
