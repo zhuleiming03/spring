@@ -1,0 +1,11 @@
+D:\IDEA\Spring\Cloud\Hystrix\Extend\src\main\java\spring\cloud\hystrix\extend\controller\DefinedController.java
+D:\IDEA\Spring\Cloud\Hystrix\Extend\src\main\java\spring\cloud\hystrix\extend\HystrixExtendApplication.java
+D:\IDEA\Spring\Cloud\Hystrix\Extend\src\main\java\spring\cloud\hystrix\extend\command\UserCollapseCommand.java
+D:\IDEA\Spring\Cloud\Hystrix\Extend\src\main\java\spring\cloud\hystrix\extend\controller\SimpleController.java
+D:\IDEA\Spring\Cloud\Hystrix\Extend\src\main\java\spring\cloud\hystrix\extend\service\UserService.java
+D:\IDEA\Spring\Cloud\Hystrix\Extend\src\main\java\spring\cloud\hystrix\extend\command\UserBatchCommand.java
+D:\IDEA\Spring\Cloud\Hystrix\Extend\src\main\java\spring\cloud\hystrix\extend\controller\ExceptionController.java
+D:\IDEA\Spring\Cloud\Hystrix\Extend\src\main\java\spring\cloud\hystrix\extend\service\ExceptionService.java
+D:\IDEA\Spring\Cloud\Hystrix\Extend\src\main\java\spring\cloud\hystrix\extend\controller\CollapseController.java
+D:\IDEA\Spring\Cloud\Hystrix\Extend\src\main\java\spring\cloud\hystrix\extend\domain\User.java
+D:\IDEA\Spring\Cloud\Hystrix\Extend\src\main\java\spring\cloud\hystrix\extend\command\UserCommand.java

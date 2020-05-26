@@ -1,0 +1,12 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+spring.core.enable.slave.domain.Goose,\
+spring.core.enable.slave.domain.Duck,\
+spring.core.enable.slave.domain.Chicken,\
+spring.core.enable.slave.config.FishAutoConfiguration,\
+spring.core.enable.slave.config.GrassAutoConfiguration,\
+spring.core.enable.slave.config.WolfAutoConfiguration,\
+spring.core.enable.slave.config.DeerAutoConfiguration
+
+
+

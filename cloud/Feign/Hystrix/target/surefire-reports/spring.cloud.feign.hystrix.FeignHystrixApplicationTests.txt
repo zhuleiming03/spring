@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: spring.cloud.feign.hystrix.FeignHystrixApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.898 s - in spring.cloud.feign.hystrix.FeignHystrixApplicationTests
