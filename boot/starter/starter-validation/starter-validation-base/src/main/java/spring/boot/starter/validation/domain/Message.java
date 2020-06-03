@@ -1,12 +1,15 @@
 package spring.boot.starter.validation.domain;
 
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 
 public class Message {
 
     @NotNull
+    @Digits(integer = 2, fraction = 0)
     private Integer id;
 
+    @NotNull
     private String context;
 
     @Override

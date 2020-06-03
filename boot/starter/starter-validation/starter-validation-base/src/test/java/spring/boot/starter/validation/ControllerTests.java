@@ -12,7 +12,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 @SpringBootTest
-class StarterValidationBaseApplicationTests {
+class ControllerTests {
 
     @Autowired
     WebApplicationContext context;
@@ -29,7 +29,7 @@ class StarterValidationBaseApplicationTests {
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/index")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"id\":123,\"context\":\"test\"}");
+                .content("{\"id\":12,\"context\":\"test\"}");
         System.out.println(">>> post result：" + mockCall(requestBuilder));
     }
 
@@ -40,7 +40,6 @@ class StarterValidationBaseApplicationTests {
                 .post("/index")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"context\":\"test\"}");
-                //.content("{\"id\":no.18,\"context\":\"test\"}");
         System.out.println(">>> post result：" + mockCall(requestBuilder));
     }
 
