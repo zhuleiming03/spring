@@ -1,6 +1,0 @@
-# Auto Configure
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-spring.core.listener.slave.SlaveConfiguration
-
-
-
