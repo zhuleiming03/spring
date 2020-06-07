@@ -2,7 +2,6 @@ package spring.cloud.neflix.feign.ribbon.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import spring.cloud.neflix.feign.ribbon.domian.User;
 import spring.cloud.neflix.feign.ribbon.service.Consumer;
 
 import javax.annotation.Resource;
