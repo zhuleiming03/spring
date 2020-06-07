@@ -1,0 +1,5 @@
+
+# Auto Listener
+org.springframework.boot.autoconfigure.AutoConfigurationImportListener=\
+spring.core.listener.master.listener.AutoConfigurationImportEventListener
+

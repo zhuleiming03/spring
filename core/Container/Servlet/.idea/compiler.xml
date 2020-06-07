@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="container-servlet-jetty" />
+        <module name="container-servlet-tomcat" />
+        <module name="container-servlet-undertow" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="container-servlet-jetty" target="1.8" />
+      <module name="container-servlet-tomcat" target="1.8" />
+      <module name="container-servlet-undertow" target="1.8" />
+      <module name="servlet" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="container-servlet-jetty" options="-parameters" />
+      <module name="container-servlet-tomcat" options="-parameters" />
+      <module name="container-servlet-undertow" options="-parameters" />
+      <module name="servlet" options="-parameters" />
+    </option>
+  </component>
+</project>
