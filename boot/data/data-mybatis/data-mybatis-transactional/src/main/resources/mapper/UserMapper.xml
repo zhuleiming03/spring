@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="spring.boot.data.mybatis.mapper.UserMapper" >
+
+    <resultMap id="BaseResultMap" type="spring.boot.data.mybatis.po.UserPO" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="user_name" property="name" jdbcType="VARCHAR" />
+        <result column="balance" property="balance" jdbcType="DECIMAL" />
+    </resultMap>
+
+    <select id="select" resultMap="BaseResultMap">
+        SELECT  id, user_name, balance
+        FROM users
+    </select>
+
+    <select id="selectById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        SELECT  id, user_name, balance
+        FROM    users
+        WHERE   id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="spring.boot.data.mybatis.po.UserPO"
+            useGeneratedKeys="true" keyProperty="id">
+        INSERT users (  id, user_name, balance,
+                        create_time, update_time, is_valid)
+        VALUES  ( #{id}, #{name}, #{balance},
+                  #{createTime}, #{updateTime}, #{vaild} )
+    </insert>
+
+    <update id="update" >
+        UPDATE users
+        SET balance = balance + #{balance}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Long">
+       DELETE FROM users WHERE id =#{id}
+    </delete>
+
+</mapper>
