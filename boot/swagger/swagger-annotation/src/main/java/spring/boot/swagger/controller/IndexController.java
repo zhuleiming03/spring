@@ -10,13 +10,19 @@ import java.time.LocalDate;
 
 @Api(tags = "属性测试")
 @RestController
-@RequestMapping("base")
+@RequestMapping("annotation")
 public class IndexController {
 
     @ApiOperation(value = "position 测试接口", notes = "按照指定顺序排序")
-    @GetMapping("post")
+    @GetMapping("position")
     public Response<User> postUser(@RequestParam("id") Integer id) {
         return new Response<>(200, "",
                 new User(id, "sean", LocalDate.now(), 18));
+    }
+
+    @ApiOperation(value = "required 测试接口", notes = "必填，不为空，只提示不验证")
+    @PostMapping("required")
+    public Response<User> postUser(@RequestBody User user) {
+        return new Response<>(200, "", user);
     }
 }

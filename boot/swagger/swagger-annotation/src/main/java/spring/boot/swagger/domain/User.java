@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @ApiModel
 public class User {
 
-    @ApiModelProperty(value = "编号", position = 1)
+    @ApiModelProperty(value = "编号", position = 1,required = true)
     private Integer id;
 
     @ApiModelProperty(value = "姓名", position = 2)
