@@ -25,4 +25,10 @@ public class IndexController {
     public Response<User> postUser(@RequestBody User user) {
         return new Response<>(200, "", user);
     }
+
+    @ApiOperation(value = "head 测试接口", notes = "")
+    @GetMapping("header")
+    public String getHeader(@RequestHeader("user") String user) {
+        return user;
+    }
 }
