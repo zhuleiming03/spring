@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import spring.boot.starter.validation.domain.Message;
+import spring.boot.starter.validation.service.ValidatorSerivce;
 
 import java.util.List;
 
@@ -18,13 +19,8 @@ public class IndexController {
     public String index(@Validated @RequestBody Message message, BindingResult bindingResult) {
         System.out.println(message);
         if (bindingResult.hasErrors()) {
-
-            StringBuilder stringBuilder = new StringBuilder();
-            List<ObjectError> errors = bindingResult.getAllErrors();
-            for (ObjectError error : errors) {
-                stringBuilder.append(StringUtils.arrayToDelimitedString(error.getCodes(), ","));
-            }
-            return stringBuilder.toString();
+            List<String> errors = ValidatorSerivce.check(message);
+            return String.join(",", errors);
         }
         return "ok";
     }
