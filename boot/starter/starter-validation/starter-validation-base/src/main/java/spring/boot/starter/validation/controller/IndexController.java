@@ -1,8 +1,6 @@
 package spring.boot.starter.validation.controller;
 
-import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
