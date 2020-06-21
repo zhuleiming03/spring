@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="spring.boot.data.mybatis.mapper.TeacherMapper" >
+
+    <resultMap id="Teacher" type="spring.boot.data.mybatis.po.TeacherPO" >
+        <id column="user_id" property="id" jdbcType="BIGINT" />
+        <result column="course" property="course" jdbcType="VARCHAR" />
+        <association column="school_id" property="schoolPo"
+            javaType="spring.boot.data.mybatis.po.SchoolPO" select="getSchool" />
+    </resultMap>
+
+    <resultMap id="bbb" type="spring.boot.data.mybatis.po.TeacherPO">
+        <id column="user_id" property="id" jdbcType="BIGINT" />
+        <result column="course" property="course" jdbcType="VARCHAR" />
+        <association property="schoolPo" javaType="spring.boot.data.mybatis.po.SchoolPO" >
+            <result column="id" property="id" />
+            <result column="name" property="name" />
+        </association>
+    </resultMap>
+
+    <resultMap id="stList" type="spring.boot.data.mybatis.po.TeacherPO">
+        <id column="tid" property="id" jdbcType="BIGINT" />
+        <result column="course" property="course" jdbcType="VARCHAR" />
+        <collection property="students" ofType="StudentPO">
+            <result column="sid" property="id" />
+            <result column="class" property="className" />
+        </collection>
+    </resultMap>
+
+    <select id="getStudent" resultMap="stList">
+      select t.user_id tid,course,s.user_id sid,class
+      from t_student s inner join t_teacher t on s.teacher_id=t.user_id where t.user_id=2;
+    </select>
+
+    <select id="getTeacher2" resultMap="bbb">
+      select user_id,course,id,name
+      from t_school s inner join t_teacher t on s.id=t.school_id where t.user_id=2
+    </select>
+
+    <select id="getTeacher" resultMap="Teacher">
+      select user_id,course,school_id from t_teacher where user_id=#{id}
+    </select>
+
+    <select id="getSchool" resultType="spring.boot.data.mybatis.po.SchoolPO">
+      select id,name from t_school where id=#{id};
+    </select>
+
+
+</mapper>
