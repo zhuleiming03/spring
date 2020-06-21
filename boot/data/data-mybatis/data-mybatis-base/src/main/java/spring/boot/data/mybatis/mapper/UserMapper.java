@@ -4,11 +4,11 @@ import spring.boot.data.mybatis.po.UserPO;
 
 public interface UserMapper {
 
-    UserPO select(Long id);
+    UserPO select(Integer id);
 
     Integer insert(UserPO user);
 
     Integer update(UserPO user);
 
-    Integer delete(Long id);
+    Integer delete(Integer id);
 }

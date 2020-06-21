@@ -1,19 +1,17 @@
 package spring.boot.data.mybatis.po;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
 
 @Data
+@NoArgsConstructor
 public class UserPO {
-    private Long id;
+
+    private Integer id;
+
     private String name;
-    private Short age;
-    private Double cheapRate;
-    private BigDecimal balance;
-    private Timestamp createTime;
-    private LocalDateTime updateTime;
-    private Boolean vaild;
+
+    private Timestamp birthday;
 }

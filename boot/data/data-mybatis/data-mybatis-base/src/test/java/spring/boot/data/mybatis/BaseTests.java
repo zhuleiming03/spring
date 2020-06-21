@@ -11,49 +11,35 @@ import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 @SpringBootTest
-class DataMybatisBaseApplicationTests {
+class BaseTests {
 
     @Test
     void selectTest() {
-        UserPO po = userMapper.select(ID);
+        UserPO po = userMapper.select(1);
         System.out.printf("SELECT result: %s \n", po);
     }
 
     @Test
     void insertTest() {
-        UserPO po = getUser();
+        UserPO po = new UserPO();
+        po.setName("Tom");
         System.out.printf("INSERT result: %s \n", userMapper.insert(po));
     }
 
     @Test
     void updateTest() {
-        UserPO po = getUser();
-        po.setBalance(new BigDecimal(109.9));
-        po.setVaild(false);
-        po.setUpdateTime(LocalDateTime.now());
+        UserPO po = new UserPO();
+        po.setId(1);
+        po.setName("Sean");
         System.out.printf("UPDATE result: %s \n", userMapper.update(po));
     }
 
     @Test
     void deleteTest() {
-        System.out.printf("DELETE result: %s \n", userMapper.delete(ID));
+        System.out.printf("DELETE result: %s \n", userMapper.delete(1));
     }
 
     @Autowired
     UserMapper userMapper;
 
-    private static final Long ID = 1000L;
-
-    private UserPO getUser() {
-        UserPO po = new UserPO();
-        po.setId(ID);
-        po.setName("Sean");
-        po.setAge(new Short("18"));
-        po.setCheapRate(0.9);
-        po.setBalance(new BigDecimal(12324.45));
-        po.setCreateTime((new Timestamp(System.currentTimeMillis())));
-        po.setUpdateTime(LocalDateTime.now());
-        po.setVaild(true);
-        return po;
-    }
 }

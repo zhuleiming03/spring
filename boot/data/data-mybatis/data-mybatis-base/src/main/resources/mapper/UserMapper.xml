@@ -4,21 +4,14 @@
 
     <resultMap id="BaseResultMap" type="spring.boot.data.mybatis.po.UserPO" >
         <id column="id" property="id" jdbcType="BIGINT" />
-        <result column="user_name" property="name" jdbcType="VARCHAR" />
-        <result column="age" property="age" jdbcType="SMALLINT" />
-        <result column="cheap_rate" property="cheapRate" jdbcType="DOUBLE" />
-        <result column="balance" property="balance" jdbcType="DECIMAL" />
-        <result column="create_time" property="createTime" jdbcType="DATE" />
-        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
-        <result column="is_valid" property="vaild" jdbcType="BIT" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
     </resultMap>
 
     <select id="select" resultMap="BaseResultMap">
 
-        SELECT  id, user_name, age,
-                cheap_rate, balance, create_time,
-                update_time, is_valid
-        FROM users
+        SELECT  id, name, birthday
+        FROM t_user
         WHERE id = #{id}
 
     </select>
@@ -26,31 +19,21 @@
     <insert id="insert" parameterType="spring.boot.data.mybatis.po.UserPO"
             useGeneratedKeys="true" keyProperty="id">
 
-        INSERT users (  id, user_name, age,
-                        cheap_rate, balance, create_time,
-                        update_time, is_valid)
-        VALUES  ( #{id}, #{name}, #{age},
-                  #{cheapRate}, #{balance}, #{createTime},
-                  #{updateTime}, #{vaild} )
+        INSERT t_user ( name ) VALUES ( #{name} )
 
     </insert>
 
     <update id="update" parameterType="spring.boot.data.mybatis.po.UserPO">
 
-        UPDATE users
-        SET user_name = #{name} ,
-            age = #{age} ,
-            cheap_rate = #{cheapRate} ,
-            balance = #{balance} ,
-            update_time = #{updateTime} ,
-            is_valid = #{vaild}
+        UPDATE t_user
+        SET name = #{name}
         WHERE id = #{id}
 
     </update>
 
-    <delete id="delete" parameterType="java.lang.Long">
+    <delete id="delete" parameterType="java.lang.Integer">
 
-       DELETE FROM users WHERE id =#{id}
+       DELETE FROM t_user WHERE id =#{id}
 
     </delete>
 
