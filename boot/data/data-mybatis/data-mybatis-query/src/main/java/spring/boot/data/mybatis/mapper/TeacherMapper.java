@@ -8,9 +8,9 @@ import java.util.List;
 @Service
 public interface TeacherMapper {
 
-    TeacherPO getTeacher(Integer id);
+    TeacherPO getTeacherByIn(Integer id);
 
-    TeacherPO getTeacher2(Integer id);
+    TeacherPO getTeacherByJoin(Integer id);
 
-    List<TeacherPO> getStudent(Integer id);
+    List<TeacherPO> getStudentByJoin(Integer id);
 }

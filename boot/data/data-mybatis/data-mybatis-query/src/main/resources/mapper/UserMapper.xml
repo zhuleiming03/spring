@@ -15,8 +15,13 @@
       select * from t_user where id=#{id}
     </select>
 
-     <select id="selectLike" parameterType="String" resultType="spring.boot.data.mybatis.po.UserPO">
+    <select id="selectLike" parameterType="String" resultType="spring.boot.data.mybatis.po.UserPO">
       select * from t_user where name like "%"#{name}"%"
+    </select>
+
+    <select id="selectByObjectExtend" parameterType="spring.boot.data.mybatis.po.TeacherPO"
+        resultType="spring.boot.data.mybatis.po.UserPO">
+      select * from t_user where id=#{schoolPo.id}
     </select>
 
 </mapper>

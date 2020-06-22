@@ -12,17 +12,17 @@ class ResultMapTest {
     TeacherMapper teacherMapper;
 
     @Test
-    void aa() {
-        System.out.println(teacherMapper.getTeacher(2));
+    void associationJoinTest() {
+        System.out.println(teacherMapper.getTeacherByJoin(2));
     }
 
     @Test
-    void bb() {
-        System.out.println(teacherMapper.getTeacher2(2));
+    void associationInTest() {
+        System.out.println(teacherMapper.getTeacherByIn(2));
     }
 
     @Test
-    void cc() {
-        teacherMapper.getStudent(2).forEach(System.out::println);
+    void collectionJoinTest() {
+        teacherMapper.getStudentByJoin(2).forEach(System.out::println);
     }
 }
