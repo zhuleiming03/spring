@@ -4,6 +4,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 import spring.boot.swagger.domain.Response;
+import spring.boot.swagger.domain.Student;
 import spring.boot.swagger.domain.User;
 
 import java.time.LocalDate;
@@ -26,9 +27,15 @@ public class IndexController {
         return new Response<>(200, "", user);
     }
 
-    @ApiOperation(value = "head 测试接口", notes = "")
+    @ApiOperation(value = "head 测试接口", notes = "提示 head 传值")
     @GetMapping("header")
     public String getHeader(@RequestHeader("user") String user) {
         return user;
+    }
+
+    @ApiOperation(value = "example 测试接口", notes = "赋默认值")
+    @GetMapping("example")
+    public String getUser(@RequestBody Student student) {
+        return "ok";
     }
 }
