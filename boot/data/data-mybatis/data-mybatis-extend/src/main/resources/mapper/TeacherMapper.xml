@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="spring.boot.data.mybatis.mapper.TeacherMapper" >
+
+
+    <insert id="insert" parameterType="TeacherPO">
+      INSERT t_teacher(teacher_id,name,school_id) VALUE(
+        #{teacherId,jdbcType=INTEGER},
+        #{name,jdbcType=VARCHAR},
+        #{schoolPo.schoolId,jdbcType=INTEGER});
+      INSERT t_school(school_id,school_name) VALUE(
+        #{schoolPo.schoolId,jdbcType=INTEGER},
+        #{schoolPo.schoolName,jdbcType=VARCHAR});
+      INSERT t_class(class_id,teacher_id,class_name) VALUE
+       <foreach collection ="classes" item="class" index= "index" separator =",">
+            (#{class.classId,jdbcType=INTEGER},
+             #{teacherId,jdbcType=INTEGER},
+             #{class.className,jdbcType=VARCHAR})
+       </foreach >
+    </insert>
+
+    <update id="create">
+        DROP TABLE IF EXISTS t_teacher;
+        CREATE TABLE `t_teacher` (
+          `teacher_id` INT NOT NULL PRIMARY KEY,
+          `name` VARCHAR(10) NULL,
+          `school_id` INT NOT NULL
+        )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_0900_AI_CI;
+
+        DROP TABLE IF EXISTS t_school;
+        CREATE TABLE `t_school` (
+          `school_id` INT NOT NULL PRIMARY KEY,
+          `school_name` VARCHAR(50) NULL
+        )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_0900_AI_CI;
+
+        DROP TABLE IF EXISTS t_class;
+        CREATE TABLE `t_class` (
+          `class_id` INT NOT NULL PRIMARY KEY,
+          `teacher_id` INT NOT NULL,
+          `class_name` VARCHAR(10) NULL
+        )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_0900_AI_CI;
+    </update>
+
+</mapper>
