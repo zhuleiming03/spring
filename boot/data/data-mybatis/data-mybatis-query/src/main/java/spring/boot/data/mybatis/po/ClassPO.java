@@ -7,9 +7,9 @@ import lombok.ToString;
 @Data
 @ToString
 @AllArgsConstructor
-public class SchoolPO {
+public class ClassPO {
 
-    private Integer schoolId;
+    private Integer classId;
 
-    private String schoolName;
+    private String className;
 }

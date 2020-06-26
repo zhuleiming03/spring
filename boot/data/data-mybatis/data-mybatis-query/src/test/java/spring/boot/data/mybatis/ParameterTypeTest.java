@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import spring.boot.data.mybatis.mapper.UserMapper;
-import spring.boot.data.mybatis.po.SchoolPO;
-import spring.boot.data.mybatis.po.TeacherPO;
 import spring.boot.data.mybatis.po.UserPO;
 
 import java.util.HashMap;
@@ -20,26 +18,17 @@ class ParameterTypeTest {
     @Test
     void testMay() {
         Map<String, Integer> map = new HashMap<>(2);
-        map.put("start", 1);
         map.put("page", 2);
+        map.put("size", 3);
         userMapper.selectByMap(map).forEach(System.out::println);
     }
 
     @Test
     void testObject() {
         UserPO userPO = new UserPO();
-        userPO.setId(3);
-        userPO.setName("Sean");
+        userPO.setId(5);
+        userPO.setName("Dream");
         System.out.println(userMapper.selectByObject(userPO));
-    }
-
-    @Test
-    void testObjectExtent() {
-        SchoolPO schoolPO = new SchoolPO();
-        schoolPO.setId(2);
-        TeacherPO teacherPO = new TeacherPO();
-        teacherPO.setSchoolPo(schoolPO);
-        System.out.println(userMapper.selectByObjectExtend(teacherPO));
     }
 
     @Test
@@ -49,6 +38,6 @@ class ParameterTypeTest {
 
     @Test
     void testLike() {
-        userMapper.selectLike("J").forEach(System.out::println);
+        userMapper.selectLike("S").forEach(System.out::println);
     }
 }

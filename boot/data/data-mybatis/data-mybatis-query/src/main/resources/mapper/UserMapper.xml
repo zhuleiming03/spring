@@ -2,26 +2,20 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="spring.boot.data.mybatis.mapper.UserMapper" >
 
-    <select id="selectByMap" parameterType="map" resultType="spring.boot.data.mybatis.po.UserPO">
-      select * from t_user limit #{start},#{page}
+    <select id="selectByMap" parameterType="map" resultType="userPO">
+      select * from t_user limit #{page},#{size}
     </select>
 
-    <select id="selectByObject" parameterType="spring.boot.data.mybatis.po.UserPO"
-        resultType="spring.boot.data.mybatis.po.UserPO">
+    <select id="selectByObject" parameterType="userPO" resultType="userPO">
       select * from t_user where name=#{name} and id=#{id}
     </select>
 
-    <select id="selectById" parameterType="integer" resultType="spring.boot.data.mybatis.po.UserPO">
+    <select id="selectById" parameterType="integer" resultType="userPO">
       select * from t_user where id=#{id}
     </select>
 
-    <select id="selectLike" parameterType="String" resultType="spring.boot.data.mybatis.po.UserPO">
+    <select id="selectLike" parameterType="String" resultType="userPO">
       select * from t_user where name like "%"#{name}"%"
-    </select>
-
-    <select id="selectByObjectExtend" parameterType="spring.boot.data.mybatis.po.TeacherPO"
-        resultType="spring.boot.data.mybatis.po.UserPO">
-      select * from t_user where id=#{schoolPo.id}
     </select>
 
 </mapper>

@@ -9,11 +9,16 @@ import java.util.List;
 @ToString
 public class TeacherPO {
 
-    private Integer id;
+    private Integer teacherId;
 
-    private String course;
+    private String name;
 
     private SchoolPO schoolPo;
 
-    private List<StudentPO> students;
+    private List<ClassPO> classes;
+
+    public TeacherPO(Integer teacherId, String name) {
+        this.teacherId = teacherId;
+        this.name = name;
+    }
 }

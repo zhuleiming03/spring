@@ -1,16 +1,14 @@
 package spring.boot.data.mybatis.mapper;
 
-import org.springframework.stereotype.Service;
 import spring.boot.data.mybatis.po.TeacherPO;
 
-import java.util.List;
-
-@Service
 public interface TeacherMapper {
 
-    TeacherPO getTeacherByIn(Integer id);
+    TeacherPO getTeacherJoinSchool(Integer id);
 
-    TeacherPO getTeacherByJoin(Integer id);
+    TeacherPO getTeacherInSchool(Integer id);
 
-    List<TeacherPO> getStudentByJoin(Integer id);
+    TeacherPO getTeacherJoinClass(Integer id);
+
+    TeacherPO getTeacherInClass(Integer id);
 }

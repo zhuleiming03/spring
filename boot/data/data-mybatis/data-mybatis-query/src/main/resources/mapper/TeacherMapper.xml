@@ -2,47 +2,64 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="spring.boot.data.mybatis.mapper.TeacherMapper" >
 
-    <resultMap id="TeacherInSchool" type="spring.boot.data.mybatis.po.TeacherPO" >
-        <id column="user_id" property="id" jdbcType="BIGINT" />
-        <result column="course" property="course" jdbcType="VARCHAR" />
+    <resultMap id="TeacherInSchool" type="TeacherPO" >
+        <id column="teacher_id" property="teacherId" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
         <association column="school_id" property="schoolPo"
-            javaType="spring.boot.data.mybatis.po.SchoolPO" select="getSchool" />
+            javaType="SchoolPO" select="getSchoolPo" />
     </resultMap>
 
-    <resultMap id="TeacherJoinSchool" type="spring.boot.data.mybatis.po.TeacherPO">
-        <id column="user_id" property="id" jdbcType="BIGINT" />
-        <result column="course" property="course" jdbcType="VARCHAR" />
-        <association property="schoolPo" javaType="spring.boot.data.mybatis.po.SchoolPO" >
-            <result column="id" property="id" />
-            <result column="name" property="name" />
+    <resultMap id="TeacherJoinSchool" type="TeacherPO">
+        <id column="teacher_id" property="teacherId" jdbcType="BIGINT" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <association property="schoolPo" javaType="SchoolPO" >
+            <result column="school_id" property="schoolId" />
+            <result column="school_name" property="schoolName" />
         </association>
     </resultMap>
 
-    <resultMap id="TeacherJoinStudent" type="spring.boot.data.mybatis.po.TeacherPO">
-        <id column="tid" property="id" jdbcType="BIGINT" />
-        <result column="course" property="course" jdbcType="VARCHAR" />
-        <collection property="students" ofType="StudentPO">
-            <result column="sid" property="id" />
-            <result column="class" property="className" />
+    <resultMap id="TeacherInClass" type="TeacherPO">
+        <id column="teacher_id" property="teacherId" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <collection column="teacher_id" property="classes" ofType="ClassPO"
+            javaType="list" select="getClassPo" />
+    </resultMap>
+
+    <resultMap id="TeacherJoinClass" type="TeacherPO">
+        <id column="teacher_id" property="teacherId" jdbcType="BIGINT" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <collection property="classes" ofType="ClassPO">
+            <result column="class_id" property="classId" />
+            <result column="class_name" property="className" />
         </collection>
     </resultMap>
 
-    <select id="getTeacherByJoin" resultMap="TeacherJoinSchool">
-      select user_id,course,id,name
-      from t_school s inner join t_teacher t on s.id=t.school_id where t.user_id=2
+    <select id="getSchoolPo" resultType="SchoolPO">
+      SELECT school_id,school_name FROM t_school WHERE school_id=#{school_id};
     </select>
 
-    <select id="getTeacherByIn" resultMap="TeacherInSchool">
-      select user_id,course,school_id from t_teacher where user_id=#{id}
+    <select id="getClassPo" resultType="ClassPO">
+      SELECT class_id,class_name FROM t_class WHERE teacher_id=#{teacher_id};
     </select>
 
-    <select id="getSchool" resultType="spring.boot.data.mybatis.po.SchoolPO">
-      select id,name from t_school where id=#{id};
+    <select id="getTeacherJoinSchool" resultMap="TeacherJoinSchool">
+      SELECT teacher_id,name,s.school_id,school_name
+      FROM t_teacher t INNER JOIN t_school s ON t.school_id =s.school_id
+      WHERE teacher_id=#{id};
     </select>
 
-    <select id="getStudentByJoin" resultMap="TeacherJoinStudent">
-      select t.user_id tid,course,s.user_id sid,class
-      from t_student s inner join t_teacher t on s.teacher_id=t.user_id where t.user_id=2;
+    <select id="getTeacherInSchool" resultMap="TeacherInSchool">
+      SELECT teacher_id,name,school_id FROM t_teacher WHERE teacher_id=#{id}
+    </select>
+
+    <select id="getTeacherJoinClass" resultMap="TeacherJoinClass">
+      SELECT t.teacher_id,name,class_name,class_id
+      FROM t_teacher t INNER JOIN t_class c ON t.teacher_id =c.teacher_id
+      WHERE t.teacher_id=#{id};
+    </select>
+
+     <select id="getTeacherInClass" resultMap="TeacherInClass">
+      SELECT teacher_id,name FROM t_teacher WHERE teacher_id=#{id}
     </select>
 
 </mapper>

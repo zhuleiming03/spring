@@ -1,7 +1,6 @@
 package spring.boot.data.mybatis.mapper;
 
 import org.springframework.stereotype.Service;
-import spring.boot.data.mybatis.po.TeacherPO;
 import spring.boot.data.mybatis.po.UserPO;
 
 import java.util.List;
@@ -17,6 +16,4 @@ public interface UserMapper {
     UserPO selectById(Integer id);
 
     List<UserPO> selectLike(String name);
-
-    UserPO selectByObjectExtend(TeacherPO teacherPO);
 }

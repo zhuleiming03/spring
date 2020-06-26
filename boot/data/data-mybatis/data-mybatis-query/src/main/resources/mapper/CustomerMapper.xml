@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="spring.boot.data.mybatis.mapper.CustomerMapper" >
+
+    <resultMap id="customer" type="spring.boot.data.mybatis.vo.CustomerVO">
+        <result property="id" column="id" />
+        <result property="cardNo" column="card_no" />
+        <result property="name" column="name" />
+        <result property="age" column="age" />
+        <result property="level" column="level" javaType="spring.boot.data.mybatis.enums.LevelEnum" />
+        <result property="cheapRate" column="cheap_rate" />
+        <result property="lastUseTime" column="last_use_time" />
+        <result property="sex" column="sex" javaType="spring.boot.data.mybatis.enums.SexEnum" />
+    </resultMap>
+
+    <select id="select" parameterType="integer" resultMap="customer" >
+        SELECT id,name,
+          card_no, login_name, level, sex, cheap_rate, last_use_time ,age
+        FROM t_user u INNER JOIN t_customer c ON u.id=c.user_id
+        WHERE user_id=#{id,jdbcType=INTEGER} ;
+    </select>
+
+</mapper>
