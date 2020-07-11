@@ -55,7 +55,7 @@ class ControllerTest {
     }
 
     @Test
-    void postCookieTest(){
+    void postCookieTest() {
 
         List<String> cookies = new ArrayList<String>();
         cookies.add("user=Tom;password=123456;type=customer");

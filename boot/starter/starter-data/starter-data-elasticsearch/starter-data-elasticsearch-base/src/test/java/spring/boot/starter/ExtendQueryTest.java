@@ -8,7 +8,7 @@ import spring.boot.starter.instance.ExtendQueryInstance;
 import java.io.IOException;
 
 @SpringBootTest
- class ExtendQueryTest {
+class ExtendQueryTest {
 
     @Autowired
     ExtendQueryInstance instance;

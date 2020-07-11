@@ -19,7 +19,7 @@ import java.util.List;
 @SpringBootTest
 class CallServiceTest {
 
-    private static final String SERVICE_HOME="http://localhost:8090/";
+    private static final String SERVICE_HOME = "http://localhost:8090/";
 
     @Test
     void getTest() {

@@ -8,7 +8,8 @@ public class User {
 
     private Float rebate;
 
-    public User(){}
+    public User() {
+    }
 
     public User(Integer id, String name, Float rebate) {
         this.id = id;
