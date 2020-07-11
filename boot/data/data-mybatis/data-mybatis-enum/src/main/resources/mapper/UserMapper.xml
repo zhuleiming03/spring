@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="spring.boot.data.mybatis.mapper.UserMapper">
+    <update id="create">
+        DROP TABLE IF EXISTS t_user;
+        CREATE TABLE `t_user` (
+        `user_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        `user_name` VARCHAR(10) NULL,
+        `gender` VARCHAR(10) NULL,
+        `user_type` INT NULL
+        )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_0900_AI_CI;
+    </update>
+
+    <insert id="insert" parameterType="list" keyProperty="userId">
+        INSERT t_user ( gender,user_name,user_type ) VALUES
+        <foreach collection="list" item="user" index="index" separator=",">
+            (#{user.gender,javaType=spring.boot.data.mybatis.enums.Gender},
+             #{user.name},
+             #{user.type})
+        </foreach>
+    </insert>
+
+    <select id="select" resultMap="base">
+      SELECT user_id,user_name,gender,user_type FROM t_user
+    </select>
+
+    <resultMap id="base" type="spring.boot.data.mybatis.pojo.User">
+        <result property="id" column="user_id" jdbcType="INTEGER"/>
+        <result property="name" column="user_name" jdbcType="INTEGER"/>
+        <result property="gender" column="gender" javaType="spring.boot.data.mybatis.enums.Gender"/>
+        <result property="type" column="user_type" javaType="spring.boot.data.mybatis.enums.UserType"/>
+    </resultMap>
+</mapper>
