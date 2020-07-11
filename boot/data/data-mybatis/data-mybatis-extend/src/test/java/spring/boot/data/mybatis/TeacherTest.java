@@ -11,7 +11,7 @@ import spring.boot.data.mybatis.po.TeacherPO;
 import java.util.Arrays;
 
 @SpringBootTest
- class TeacherTest {
+class TeacherTest {
 
     @Autowired
     TeacherMapper teacherMapper;

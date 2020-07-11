@@ -14,7 +14,7 @@ public interface UserMapper {
 
     Integer insert(UserPO user);
 
-    Integer update(@Param("id") Long id,@Param("balance") BigDecimal balance);
+    Integer update(@Param("id") Long id, @Param("balance") BigDecimal balance);
 
     Integer delete(Long id);
 }
