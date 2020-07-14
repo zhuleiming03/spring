@@ -1,5 +1,6 @@
 package spring.boot.data.mybatis.mapper;
 
+import org.apache.ibatis.annotations.Param;
 import spring.boot.data.mybatis.pojo.User;
 
 import java.util.List;
@@ -16,6 +17,8 @@ public interface UserMapper {
     User selectByObject(User userPo);
 
     User selectById(Integer id);
+
+    User selectByIdAndName(@Param("id") Integer id, @Param("name") String name);
 
     List<User> selectLike(String name);
 

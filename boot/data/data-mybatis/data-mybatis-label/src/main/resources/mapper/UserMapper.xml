@@ -23,6 +23,13 @@
          FROM t_user limit #{page},#{size}
     </select>
 
+    <select id="selectByIdAndName" resultMap="user">
+      SELECT
+        <include refid="base"/>
+         FROM t_user
+         WHERE user_id=#{id} AND user_name=#{name}
+    </select>
+
     <select id="selectByObject" parameterType="spring.boot.data.mybatis.pojo.User" resultMap="user">
       SELECT
         <include refid="base"/>

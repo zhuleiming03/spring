@@ -21,6 +21,11 @@ class ParameterTypeTest {
     }
 
     @Test
+    void testIdAndName(){
+        System.out.println(userMapper.selectByIdAndName(105,"鸣人"));
+    }
+
+    @Test
     void testMay() {
         Map<String, Integer> map = new HashMap<>(2);
         map.put("page", 2);
