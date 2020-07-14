@@ -5,7 +5,8 @@ import spring.boot.data.mybatis.pojo.User;
 
 public interface UserMapper {
 
-    @Select("SELECT id, name, birthday FROM t_user WHERE id = #{id}")
+    @Select("SELECT id, name AS user_name, birthday FROM t_user WHERE id = #{id}")
+    @Results(@Result(property = "name", column = "user_name"))
     User select(@Param("id") Integer id);
 
     @Insert("INSERT t_user ( name ) VALUES ( #{name} )")
