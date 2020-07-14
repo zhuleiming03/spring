@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="spring.boot.data.mybatis.mapper.SchoolMapper">
+    <update id="create">
+        DROP TABLE IF EXISTS t_school;
+        CREATE TABLE `t_school` (
+        `school_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        `school_name` VARCHAR(30) NULL
+        )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_0900_AI_CI;
+    </update>
+
+    <insert id="insert" parameterType="spring.boot.data.mybatis.pojo.School" useGeneratedKeys="true"
+            keyProperty="id">
+        INSERT t_school(school_name) VALUE (#{name})
+    </insert>
+
+    <select id="trim" parameterType="spring.boot.data.mybatis.pojo.School" resultMap="school">
+      SELECT school_id,school_name FROM t_school
+      <trim prefix="ORDER BY" suffix="DESC" suffixOverrides=",">
+        <if test="id!=null ">school_id,</if>
+        <if test="name!=null ">school_name,</if>
+      </trim>
+    </select>
+
+    <resultMap id="school" type="spring.boot.data.mybatis.pojo.School">
+        <result property="name" column="school_name" />
+        <result property="id" column="school_id" />
+    </resultMap>
+</mapper>
