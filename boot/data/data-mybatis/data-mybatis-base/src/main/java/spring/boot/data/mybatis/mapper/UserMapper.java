@@ -1,14 +1,16 @@
 package spring.boot.data.mybatis.mapper;
 
-import spring.boot.data.mybatis.po.UserPO;
+import spring.boot.data.mybatis.pojo.User;
 
 public interface UserMapper {
 
-    UserPO select(Integer id);
+    void create();
 
-    Integer insert(UserPO user);
+    User select(Integer id);
 
-    Integer update(UserPO user);
+    Integer insert(User user);
+
+    Integer update(User user);
 
     Integer delete(Integer id);
 }
