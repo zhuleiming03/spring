@@ -1,4 +1,4 @@
-package spring.boot.data.mybatis.po;
+package spring.boot.data.mybatis.pojo;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 
 @Data
 @NoArgsConstructor
-public class UserPO {
+public class User {
 
     private Integer id;
 
