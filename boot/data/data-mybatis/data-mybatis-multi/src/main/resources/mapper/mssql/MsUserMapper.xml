@@ -23,12 +23,12 @@
     </select>
 
     <select id="select" resultMap="BaseResultMap">
-        SELECT  id, name FROM t_user
+        SELECT  id, name FROM dbo.UserInfo
     </select>
 
     <insert id="insert" parameterType="spring.boot.data.mybatis.pojo.User"
             useGeneratedKeys="true" keyProperty="id">
-        INSERT t_user ( name ) VALUES ( #{name} )
+        INSERT dbo.UserInfo ( name ) VALUES ( #{name} )
     </insert>
 
 </mapper>
