@@ -1,5 +1,7 @@
 package spring.boot.starter.validation.domain;
 
+import spring.boot.starter.validation.define.Price;
+
 import javax.validation.constraints.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -137,6 +139,9 @@ public class Message {
     @Size(max = 10, min = 1)
     private List<String> size;
 
+    @Price
+    private BigDecimal amount;
+
     public Message() {
     }
 
@@ -165,6 +170,7 @@ public class Message {
                 ", positive='" + positive + '\'' +
                 ", positiveOrZero='" + positiveOrZero + '\'' +
                 ", size=" + size +
+                ", amount='" + amount + '\'' +
                 '}';
     }
 
@@ -342,5 +348,13 @@ public class Message {
 
     public void setSize(List<String> size) {
         this.size = size;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
     }
 }

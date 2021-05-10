@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import spring.boot.starter.validation.domain.Message;
 import spring.boot.starter.validation.service.IndexService;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Arrays;
@@ -50,6 +51,7 @@ class MessageTests {
         message.setPositive(12.45f);
         message.setPositiveOrZero(0.0f);
         message.setSize(list);
+        message.setAmount(new BigDecimal("0.5001"));
 
         return message;
     }
