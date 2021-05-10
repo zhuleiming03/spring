@@ -51,7 +51,7 @@ class MessageTests {
         message.setPositive(12.45f);
         message.setPositiveOrZero(0.0f);
         message.setSize(list);
-        message.setAmount(new BigDecimal("0.5001"));
+        message.setAmount(new BigDecimal("0.500"));
 
         return message;
     }
