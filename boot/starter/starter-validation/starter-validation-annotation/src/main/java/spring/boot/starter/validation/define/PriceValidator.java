@@ -9,7 +9,6 @@ import java.math.BigDecimal;
 /**
  * @author
  */
-@Component
 public class PriceValidator implements ConstraintValidator<Price, BigDecimal> {
 
     @Override
