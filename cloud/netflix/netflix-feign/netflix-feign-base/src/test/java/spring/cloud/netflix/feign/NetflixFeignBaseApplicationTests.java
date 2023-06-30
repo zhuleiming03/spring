@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -18,17 +19,24 @@ class NetflixFeignBaseApplicationTests {
     }
 
     @Test
-    void getTest() {
+    void getTest() throws Exception {
         RequestBuilder requestBuilder = MockMvcRequestBuilders
-                .get("/get");
-        System.out.printf("【GET】InstanceInfo： %s\n", mockCall(requestBuilder));
+                .get("/feign/get");
+        String contentAsString = mockMVC.perform(requestBuilder)
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
+        System.out.printf("【GET】InstanceInfo： %s\n", contentAsString);
     }
 
     @Test
-    void postTest() {
+    void postTest() throws Exception {
         RequestBuilder requestBuilder = MockMvcRequestBuilders
-                .get("/post");
-        System.out.printf("【POST】User: %s\n", mockCall(requestBuilder));
+                .post("/feign/post");
+        MockHttpServletResponse response = mockMVC.perform(requestBuilder)
+                .andReturn()
+                .getResponse();
+        System.out.printf("【POST】User: %s\n", new String(response.getContentAsByteArray()));
     }
 
     @Autowired
@@ -38,18 +46,6 @@ class NetflixFeignBaseApplicationTests {
     @BeforeEach
     private void initEnvironment() {
         mockMVC = MockMvcBuilders.webAppContextSetup(context).build();
-    }
-
-    private String mockCall(RequestBuilder requestBuilder) {
-        try {
-            return mockMVC.perform(requestBuilder)
-                    .andReturn()
-                    .getResponse()
-                    .getContentAsString();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return "404";
     }
 
 }
