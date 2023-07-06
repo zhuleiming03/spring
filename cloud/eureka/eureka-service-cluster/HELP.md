@@ -1,11 +1,8 @@
 # Read Me First
  * 服务注册中心（集群）
- * 需要配置主机域名
- * Windows: C:\Windows\System32\drivers\etc\hosts
- * Linux:   /etc/host
- * 添加 127.0.0.1 eureka-server 127.0.0.1 eureka-server-1 127.0.0.1 eureka-server-2
  * 打包好后分别运行
- * java -jar eureka-service-cluster-0.0.1-SNAPSHOT.jar --spring.profiles.active=peer1
- * java -jar eureka-service-cluster-0.0.1-SNAPSHOT.jar --spring.profiles.active=peer2
+ * java -jar eureka-service-cluster.jar --spring.profiles.active=peer1
+ * java -jar eureka-service-cluster.jar --spring.profiles.active=peer2
+ * 成功后访问 http://localhost:8011/ 或 http://localhost:8012/
  
- * docker run -d -p 8080:8080 --name docker-base demo/docker-base
+ * 启动命令 docker run -d -p 8011:8011 -p 8012:8012 --name  eureka-service-cluster demo/eureka-service-cluster
