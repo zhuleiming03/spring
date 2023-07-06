@@ -36,6 +36,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--需额外复制一份jar用于docker镜像打包-->
+                <configuration>
+                    <outputDirectory>${basedir}/target/docker</outputDirectory>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>com.spotify</groupId>
@@ -43,7 +47,7 @@
                 <version>0.4.14</version>
                 <configuration>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-                    <dockerDirectory>src</dockerDirectory>
+                    <dockerDirectory>${basedir}/src/main/resources/docker</dockerDirectory>
                 </configuration>
             </plugin>
         </plugins>
