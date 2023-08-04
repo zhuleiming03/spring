@@ -10,7 +10,7 @@
     </parent>
     <groupId>spring.cloud.netflix</groupId>
     <artifactId>netflix-feign-service</artifactId>
-    <version>0.0.5-SNAPSHOT</version>
+    <version>0.0.6</version>
     <name>netflix-feign-service</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -92,7 +92,7 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.14</version>
                 <configuration>
-                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+                    <imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
                     <dockerDirectory>${basedir}/src/main/resources/docker</dockerDirectory>
                 </configuration>
             </plugin>
