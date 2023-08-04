@@ -12,7 +12,7 @@ public class ConsumerController {
     @Resource
     private RestTemplate restTemplate;
 
-    private final static String SERVICE_NAME = "eureka-netflix-service";
+    private final static String SERVICE_NAME = "netflix-service";
 
     @RequestMapping(value = "index")
     public String helloConsumer() {
