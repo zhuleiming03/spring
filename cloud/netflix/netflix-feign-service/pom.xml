@@ -80,13 +80,14 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <outputDirectory>${basedir}/target/docker</outputDirectory>
-                </configuration>
-            </plugin>
+            <!--<plugin>-->
+                <!--&lt;!&ndash;insert 需要注释 docker 需要这段&ndash;&gt;-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<outputDirectory>${basedir}/target/docker</outputDirectory>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>

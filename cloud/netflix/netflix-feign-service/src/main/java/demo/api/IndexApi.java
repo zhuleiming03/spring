@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(value = "eureka-feign-service", contextId = "IndexApi")
+@FeignClient(value = "feign-service", contextId = "IndexApi")
 public interface IndexApi {
 
     @GetMapping("feign/get")
